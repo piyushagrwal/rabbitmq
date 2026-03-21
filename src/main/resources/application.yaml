@@ -1,0 +1,24 @@
+# for manual exception handling
+#spring:
+#  rabbitmq:
+#    listener:
+#      simple:
+#        acknowledge-mode: manual
+
+spring:
+  rabbitmq:
+    host:
+    username:
+    virtual-host:
+    password:
+    listener:
+      simple:
+        # only for automatic ack mode
+        retry:
+          enabled: true
+          initial-interval: 3s
+          max-interval: 10s
+          max-attempts: 5
+          multiplier: 2
+
+
