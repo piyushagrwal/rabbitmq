@@ -21,4 +21,18 @@ spring:
           max-attempts: 5
           multiplier: 2
 
+# for setting prefetch count (for fast producer and slow consumers)
+#spring:
+#  rabbitmq:
+#    listener:
+#      simple:
+#        prefetch: 1
+
+# for getting message publishing status
+#spring:
+#  rabbitmq:
+#    publisher-confirm-type: correlated
+#    publisher-returns: true
+#    template:
+#      mandatory: true
 
